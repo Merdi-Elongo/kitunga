@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kitunga/views/loader.dart';
+import 'package:kitunga/views/login_page.dart';
 import 'package:kitunga/views/splash_view.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: new Center(
-          child: SplashView(),
+          child: LoginPage(),
         ),
         backgroundColor: Colors.blue,
       ),

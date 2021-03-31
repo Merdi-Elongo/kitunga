@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kitunga/utils/color.dart';
 import 'package:kitunga/utils/string.dart';
+import 'package:kitunga/views/home_page.dart';
+import 'package:kitunga/views/login_page.dart';
 
 class AccountTransition extends StatefulWidget {
   @override
@@ -15,6 +17,13 @@ class _AccountTransitionState extends State<AccountTransition> {
   @override
   void initState() {
     super.initState();
+  }
+
+  void loginPage() {
+    Navigator.push(context, MaterialPageRoute(
+        builder: (context) => LoginPage(),
+      ),
+    );
   }
 
   @override
@@ -51,7 +60,7 @@ class _AccountTransitionState extends State<AccountTransition> {
                       child: SizedBox(
                         width: MediaQuery.of(context).size.width * 0.5,
                         child: ElevatedButton(
-                          onPressed: (){},
+                          onPressed: (){ this.loginPage(); },
                           child: Text(
                             login,
                             style: TextStyle(
