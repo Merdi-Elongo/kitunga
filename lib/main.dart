@@ -12,9 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
       home: Scaffold(
         body: new Center(
-          child: LoginPage(),
+          child: SplashView(),
         ),
         backgroundColor: Colors.blue,
       ),

@@ -20,6 +20,7 @@ class _SplashViewState extends State<SplashView> {
             builder: (context) => AccountTransition(),
             ),
           );
+          Navigator.canPop(context);
         },
     );
   }
