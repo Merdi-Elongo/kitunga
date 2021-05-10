@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:kitunga/utils/color.dart';
 import 'package:kitunga/utils/string.dart';
 import 'package:kitunga/views/account_transition_view.dart';
+import 'package:kitunga/views/home_layout.dart';
+import 'package:kitunga/views/pages/home_page.dart';
 import 'package:kitunga/widget/buttonInput.dart';
 import 'package:kitunga/widget/textInput.dart';
 
@@ -27,9 +29,9 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   void dispose() {
+    super.dispose();
     T_username.dispose();
     T_password.dispose();
-    super.dispose();
   }
 
   void connect() {
@@ -100,15 +102,11 @@ class _LoginPageState extends State<LoginPage> {
                         child: Text(forgot_password),
                       ),
                       ButtonInput(
-                          onPressed: () => showDialog(
-                            context: context,
-                            builder: (context) {
-                              return AlertDialog(
-                                // Retrieve the text the that user has entered by using the
-                                // TextEditingController.
-                                content: Text(T_username.text),
-                              );
-                            },
+                          onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => HomeLayout(),
+                            ),
                           ),
                           text: login,
                           background: blue,
@@ -124,7 +122,6 @@ class _LoginPageState extends State<LoginPage> {
           ],
         ),
       )
-
     );
   }
 

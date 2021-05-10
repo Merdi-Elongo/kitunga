@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kitunga/utils/color.dart';
 import 'package:kitunga/utils/string.dart';
-import 'package:kitunga/views/home_page.dart';
+import 'package:kitunga/views/pages/home_page.dart';
 import 'package:kitunga/views/login_page.dart';
 
 class AccountTransition extends StatefulWidget {
